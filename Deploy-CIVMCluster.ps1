@@ -52,6 +52,7 @@ for ($i = 114; $i -le 114; $i++)
     $VIObject = Get-VIObjectByVIView $VSphereView
 
     # Change the network manager propoerties
+    # Assuming the static IP is 10.1.1.250, make it 10.1.1.$i
     $Results = Invoke-VMScript -VM $ViObject -ScriptText "sed -i -e 's/10\.1\.1\.250/10\.1\.1\.$i/g' /etc/network/interfaces" -GuestUser $GuestUser -GuestPassword $GuestPassword -ErrorAction SilentlyContinue
 
     # Reboot the VM
