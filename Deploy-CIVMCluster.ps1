@@ -17,8 +17,8 @@
     https://github.com/jmcnatt/PowerCLI
 #>
 
-Connect-VIServer -Server 'rlesvctr.main.ad.rit.edu'
-Connect-CIServer -Server 'rlesvcloud.rit.edu'
+Connect-VIServer -Server 'vcloud.local'
+Connect-CIServer -Server 'vcenter.local'
 
 $Vapp = Get-CIVapp "QI Cluster"
 $Template = Get-CIVMTemplate "QI-NODE"
