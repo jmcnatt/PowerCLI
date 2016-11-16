@@ -25,7 +25,7 @@ $Template = Get-CIVMTemplate "QI-NODE"
 $GuestUser = 'root'
 $GuestPassword = 'qi'
 
-for ($i = 114; $i -le 114; $i++)
+for ($i = 1; $i -le 100; $i++)
 {
     $Name = "QI-NODE-{0:000}" -f $i
     Write-Host "[$Name]: Deploying VM"
